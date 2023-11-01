@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,18 +15,37 @@ namespace CustomList
         private int capacity;
         private int count;
 
+        public int Capacity { get { return capacity; } }
+        public int Count { get { return count; } }
+
         //Constructor
         public CustomList()
         {
-            //capacity = 
-            //count =
-            //items = 
-        }
+            capacity = 4;
+            count = 0;
+            items = new T[capacity];
 
+        }
+        //Custom Indexer
+        public T this [int index]    
+        {
+            get 
+            {
+                return items[index];
+            }
+            set
+            {
+                items[index]=value;
+
+            }
+        }
         //Member Methods (CAN DO)
         public void Add(T item)
         {
             //'item' parameter should be added to internal 'items' array
+            
+            .Add (T "Hello"); 
+            T.   .Add("World");
             //if items array is at capacity, double capacity and create new array
             //transfer all items to new array
         }
