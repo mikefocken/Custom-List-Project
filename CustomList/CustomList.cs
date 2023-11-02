@@ -27,9 +27,9 @@ namespace CustomList
 
         }
         //Custom Indexer
-        public T this [int index]    
+        public T this[int index]
         {
-            get 
+            get
             {
                 return items[index];
             }
@@ -41,15 +41,16 @@ namespace CustomList
         }
         //Member Methods (CAN DO)
         public void Add(T item)
-        {
-            //'item' parameter should be added to internal 'items' array
-            
-            .Add (T "Hello"); 
-            T.   .Add("World");
-            //if items array is at capacity, double capacity and create new array
-            //transfer all items to new array
-        }
+        {       //'item' parameter should be added to internal 'items' array
+                //if items array is at capacity, double capacity and create new array
+                //transfer all items to new array
 
+            items[0]=item;
+            items[1]=item;
+
+        }   
+
+        
         public bool Remove(T item)
         {
             //If 'item' exists in the 'items' array, remove its first instance
