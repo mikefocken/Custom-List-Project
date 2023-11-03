@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Net.Security;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,15 +40,14 @@ namespace CustomList
 
             }
         }
-        //Member Methods (CAN DO)
         public void Add(T item)
+        //Member Methods (CAN DO)
         {       //'item' parameter should be added to internal 'items' array
                 //if items array is at capacity, double capacity and create new array
                 //transfer all items to new array
-
-            items[0]=item;
-            items[1]=item;
-
+            items[count]=item;
+            count++;
+            
         }   
 
         
