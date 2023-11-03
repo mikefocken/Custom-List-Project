@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -47,7 +48,13 @@ namespace CustomList
                 //transfer all items to new array
             items[count]=item;
             count++;
-            
+
+            for (int i = 4; i > myList.Capacity; i++)
+            {
+                string[] newMyList;
+            }
+
+
         }   
 
         
