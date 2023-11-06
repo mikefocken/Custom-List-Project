@@ -10,6 +10,8 @@ namespace CustomListTest
     [TestClass]
     public class AddMethodTest1
     {
+        private CustomList<string> i;
+
         [TestMethod]
         //public void AddMethod_AddTwoItems_SecondItemAtIndexOne()
         //{
@@ -34,13 +36,29 @@ namespace CustomListTest
         //    myList.Add("doing");
         //    myList.Add("today?");
 
-            //Assert
-            //Assert.AreEqual("Hello", myList[0]);///passed
+        //Assert
+        //Assert.AreEqual("Hello", myList[0]);///passed
         //}
-        public void AddMethod_CountIncreasesAsItemsAdded()
-        {
+        //public void AddMethod_CountIncreasesAsItemsAdded()
+        //{
+        //    //arrange
+
+        //    CustomList<string> myList = new CustomList<string>();
+        //    //Act
+        //    myList.Add("Hello");
+        //    myList.Add("World");
+        //    myList.Add("How");
+        //    myList.Add("are");
+        //    myList.Add("doing");
+        //    myList.Add("today?");
+        //    //Assert
+        //    //Assert.AreEqual(4,4);passed
+        //}
+        public void AddMethod_onceCountIsGreaterThanCapacityCreateNewArray()
+        { 
+
             //arrange
-            
+
             CustomList<string> myList = new CustomList<string>();
             //Act
             myList.Add("Hello");
@@ -50,18 +68,16 @@ namespace CustomListTest
             myList.Add("doing");
             myList.Add("today?");
             //Assert
-            //Assert.AreEqual(4,4);passed
-            
-            for (int i = 4; i > myList.Capacity; i++)
-            {
-                string[] newMyList;
-            }
-
-
-
+    
+            Assert.AreEqual(1, myList.Count);
 
 
         }
+
+
+
+
+        
 
 
 

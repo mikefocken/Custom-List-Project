@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Net.Security;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -16,6 +18,7 @@ namespace CustomList
         private T[] items;
         private int capacity;
         private int count;
+        private object tempArray;
 
         public int Capacity { get { return capacity; } }
         public int Count { get { return count; } }
@@ -49,15 +52,30 @@ namespace CustomList
             items[count]=item;
             count++;
 
-            for (int i = 4; i > myList.Capacity; i++)
+            if (count>=capacity)
             {
-                string[] newMyList;
+               capacity=capacity*2;
+               T[]items = new T[capacity];
             }
 
+            int[] tempArray = { 0, 1, 2, 3 };
+            int[] newArray = new int[capacity];
+            
 
-        }   
+            for (int i =0;i< tempArray.Length;i++)
+            {
 
-        
+                newArray[i]=tempArray[i];
+                
+            }
+
+            
+           
+        }
+
+
+
+
         public bool Remove(T item)
         {
             //If 'item' exists in the 'items' array, remove its first instance
@@ -75,6 +93,7 @@ namespace CustomList
         public static CustomList<T> operator +(CustomList<T> firstList, CustomList<T> secondList)
         {
             //returns a single CustomList<T> that contains all items from firstList and all items from secondList 
+
             return null;
         }
 
