@@ -54,26 +54,21 @@ namespace CustomList
 
             if (count>=capacity)
             {
-               capacity=capacity*2;
-               T[]items = new T[capacity];
+                capacity=capacity*2;
+                T[] tempArray = new T[capacity];
             }
-
-            int[] tempArray = { 0, 1, 2, 3 };
-            int[] newArray = new int[capacity];
+            
             
 
-            for (int i =0;i< tempArray.Length;i++)
+            for (int i = 1; i< items.Length; i++)
             {
+                tempArray=items;
 
-                newArray[i]=tempArray[i];
-                
             }
 
             
-           
+
         }
-
-
 
 
         public bool Remove(T item)
